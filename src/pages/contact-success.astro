@@ -1,0 +1,39 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Thank You - Contact Form Submitted | Aden Enterprises',
+  description: 'Thank you for contacting Aden Enterprises. We will respond to your inquiry as soon as possible.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <HeroText
+    tagline="Thank You"
+    title="Message Received!"
+    subtitle="Thank you for contacting Aden Enterprises, LLC. We have received your message and will respond as soon as possible."
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Call Us: (307) 660-3011',
+        href: 'tel:+13076603011',
+        icon: 'tabler:phone',
+      },
+      {
+        text: 'Back to Home',
+        href: '/'
+      },
+    ]}
+    title="Need Immediate Assistance?"
+    subtitle="For urgent construction needs, feel free to call us directly at (307) 660-3011 or return to our homepage to learn more about our services."
+  />
+</Layout>
