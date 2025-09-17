@@ -53,96 +53,68 @@ export async function onRequestPost(context) {
 }
 
 /**
- * Send email notification using Cloudflare Email Workers
+ * Send contact form data to Make.com webhook for processing
+ * This approach is client-friendly: no DNS changes, no domain verification, no email service setup
  */
 async function sendEmailNotification(formData, env) {
-  // Format the email content
-  const emailBody = `
-New Contact Form Submission - Aden Enterprises
+  // Prepare data for Make.com webhook
+  const webhookData = {
+    // Website/client information
+    website: 'Aden Enterprises, LLC',
+    domain: 'adenentllc.com',
+    submissionId: `aden-${Date.now()}`, // Unique ID for tracking
 
-Details:
-- First Name: ${formData.firstName || 'Not provided'}
-- Last Name: ${formData.lastName || 'Not provided'}
-- Phone: ${formData.phone || 'Not provided'}
-- Email: ${formData.email || 'Not provided'}
-- Message: ${formData.message || 'Not provided'}
+    // Form data
+    firstName: formData.firstName || 'Not provided',
+    lastName: formData.lastName || 'Not provided',
+    phone: formData.phone || 'Not provided',
+    email: formData.email || 'Not provided',
+    message: formData.message || 'Not provided',
 
-Submitted at: ${new Date().toLocaleString('en-US', { timeZone: 'America/Denver' })} (Mountain Time)
+    // Metadata
+    timestamp: new Date().toISOString(),
+    timezone: 'America/Denver',
+    userAgent: env.request?.headers?.get('User-Agent') || 'Unknown',
 
----
-This email was sent automatically from the Aden Enterprises contact form.
-Website: ${formData.email ? `Reply to: ${formData.email}` : 'No email provided'}
-  `.trim();
+    // Email routing
+    destinationEmail: 'kellee@prairiegiraffe.com',
 
-  const htmlBody = `
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>New Contact Form Submission</title>
-</head>
-<body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px;">
-    <div style="background: #f4f4f4; padding: 20px; border-radius: 8px;">
-        <h2 style="color: #2c3e50; margin-top: 0;">New Contact Form Submission - Aden Enterprises</h2>
+    // Future AI filtering data
+    spamScore: 0, // Placeholder for future AI spam detection
+    category: 'contact-form', // For routing/filtering
+  };
 
-        <div style="background: white; padding: 20px; border-radius: 5px; margin: 20px 0;">
-            <h3 style="color: #34495e; margin-top: 0;">Contact Details:</h3>
-            <table style="width: 100%; border-collapse: collapse;">
-                <tr><td style="padding: 8px 0; font-weight: bold;">First Name:</td><td style="padding: 8px 0;">${formData.firstName || 'Not provided'}</td></tr>
-                <tr><td style="padding: 8px 0; font-weight: bold;">Last Name:</td><td style="padding: 8px 0;">${formData.lastName || 'Not provided'}</td></tr>
-                <tr><td style="padding: 8px 0; font-weight: bold;">Phone:</td><td style="padding: 8px 0;">${formData.phone || 'Not provided'}</td></tr>
-                <tr><td style="padding: 8px 0; font-weight: bold;">Email:</td><td style="padding: 8px 0;">${formData.email || 'Not provided'}</td></tr>
-            </table>
-        </div>
+  // Make.com webhook URL (Prairie Giraffe universal webhook)
+  const webhookUrl = 'https://hook.us1.make.com/4cc22ksg4lqahuu2w8kom41rq0llnru4';
 
-        <div style="background: white; padding: 20px; border-radius: 5px; margin: 20px 0;">
-            <h3 style="color: #34495e; margin-top: 0;">Message:</h3>
-            <p style="background: #f8f9fa; padding: 15px; border-left: 4px solid #3498db; margin: 0;">
-                ${formData.message || 'No message provided'}
-            </p>
-        </div>
-
-        <div style="text-align: center; color: #7f8c8d; font-size: 14px; margin-top: 30px;">
-            <p>Submitted at: ${new Date().toLocaleString('en-US', { timeZone: 'America/Denver' })} (Mountain Time)</p>
-            <p>This email was sent automatically from the Aden Enterprises contact form.</p>
-        </div>
-    </div>
-</body>
-</html>
-  `.trim();
-
-  // Use Cloudflare's Email Workers API
   try {
-    // Check if email binding is available
-    if (!env.EMAIL) {
-      console.log('Email binding not configured. Email content that would be sent:');
-      console.log('To: kellee@prairiegiraffe.com');
-      console.log('From: noreply@adenentllc.com');
-      console.log('Subject:', `New Contact Form Submission - ${formData.firstName} ${formData.lastName}`);
-      console.log('Body:', emailBody);
-      return;
-    }
+    console.log('Sending contact form data to Make.com webhook:', JSON.stringify(webhookData, null, 2));
 
-    // Send email using Cloudflare Email Workers
-    await env.EMAIL.send({
-      from: 'noreply@adenentllc.com',
-      to: 'kellee@prairiegiraffe.com',
-      subject: `New Contact Form Submission - ${formData.firstName} ${formData.lastName}`,
-      text: emailBody,
-      html: htmlBody,
+    const response = await fetch(webhookUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'User-Agent': 'Cloudflare-Workers/1.0 (Aden Enterprises Contact Form)',
+      },
+      body: JSON.stringify(webhookData),
     });
 
-    console.log('Email notification sent successfully to kellee@prairiegiraffe.com via Cloudflare Email Workers');
+    if (response.ok) {
+      const responseText = await response.text();
+      console.log('✅ Contact form successfully sent to Make.com webhook');
+      console.log('Response:', responseText);
+    } else {
+      throw new Error(`Make.com webhook responded with status ${response.status}: ${await response.text()}`);
+    }
   } catch (error) {
-    console.error('Failed to send email via Cloudflare Email Workers:', error);
+    console.error('❌ Failed to send to Make.com webhook:', error);
 
-    // Fallback: Log the email content for debugging
-    console.log('Email content that failed to send:');
-    console.log('To: kellee@prairiegiraffe.com');
-    console.log('From: noreply@adenentllc.com');
-    console.log('Subject:', `New Contact Form Submission - ${formData.firstName} ${formData.lastName}`);
-    console.log('Body:', emailBody);
+    // Fallback: Log the data that failed to send
+    console.log('Contact form data that failed to send to webhook:');
+    console.log('Webhook URL:', webhookUrl);
+    console.log('Data:', JSON.stringify(webhookData, null, 2));
 
-    throw error; // Re-throw to be caught by the main function
+    // Don't throw - we want the form to still redirect to success page
+    // The user doesn't need to know about webhook failures
   }
 }
