@@ -1,4 +1,4 @@
-import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
+import { getPermalink } from './utils/permalinks';
 
 export const headerData = {
   links: [
@@ -97,7 +97,11 @@ export const footerData = {
     { text: 'Privacy Policy', href: getPermalink('/privacy') },
   ],
   socialLinks: [
-    { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: 'https://www.facebook.com/Aden-Enterprises-LLC-110589294100062' },
+    {
+      ariaLabel: 'Facebook',
+      icon: 'tabler:brand-facebook',
+      href: 'https://www.facebook.com/Aden-Enterprises-LLC-110589294100062',
+    },
   ],
   footNote: `
     © ${new Date().getFullYear()} Aden Enterprises, LLC. All rights reserved. · Designed by <a class="text-blue-600 underline dark:text-muted" href="https://prairiegiraffe.com" target="_blank">Prairie Giraffe</a>

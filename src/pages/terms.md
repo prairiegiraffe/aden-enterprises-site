@@ -10,9 +10,11 @@ Welcome to the Aden Enterprises, LLC website. By accessing or using our website,
 ## 1. General Use of Website
 
 ### Acceptance of Terms
+
 Your use of this website constitutes acceptance of these terms and conditions. Aden Enterprises, LLC reserves the right to modify these terms at any time without prior notice. Continued use of the website following any changes constitutes acceptance of the modified terms.
 
 ### Permitted Use
+
 This website is provided for informational purposes about our construction and contracting services. You may view, download, and print materials from this site for personal, non-commercial use only, provided you maintain all copyright and proprietary notices.
 
 ## 2. Intellectual Property
@@ -22,17 +24,21 @@ All content on this website, including text, graphics, logos, images, and softwa
 ## 3. Website Information
 
 ### Accuracy of Information
+
 While we strive to provide accurate and current information, Aden Enterprises, LLC makes no warranties or representations regarding the accuracy, completeness, or timeliness of the information on this website. Information about services, pricing, and availability is subject to change without notice.
 
 ### Not Professional Advice
+
 Information provided on this website is for general informational purposes only and should not be construed as professional engineering, architectural, or construction advice. Specific project requirements should be discussed directly with our team.
 
 ## 4. Service Information
 
 ### Estimates and Proposals
+
 Any estimates, quotes, or preliminary pricing information provided through this website or initial consultations are subject to change based on actual project conditions, requirements, and formal assessment. Final pricing will be provided in written contracts.
 
 ### Service Availability
+
 Services described on this website may not be available in all areas or for all project types. Service availability is subject to scheduling, weather conditions, and other factors.
 
 ## 5. Third-Party Links
@@ -42,9 +48,11 @@ This website may contain links to third-party websites. These links are provided
 ## 6. Limitation of Liability
 
 ### Disclaimer
+
 THE WEBSITE AND ALL INFORMATION, CONTENT, MATERIALS, AND SERVICES PROVIDED ON THE WEBSITE ARE PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS WITHOUT WARRANTIES OF ANY KIND.
 
 ### Limitation
+
 In no event shall Aden Enterprises, LLC, its officers, directors, employees, or agents be liable for any direct, indirect, incidental, special, consequential, or punitive damages arising from your use of the website or inability to use the website.
 
 ## 7. Indemnification

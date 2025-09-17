@@ -11,7 +11,7 @@ metadata:
   title:
     default: Aden Enterprises
     template: '%s — Aden Enterprises'
-  description: "Professional construction and contracting services in Gillette, Wyoming. Specializing in concrete work, foundation repair, structural construction, helical piles, spray foam insulation, and soil stabilization for residential and commercial projects."
+  description: 'Professional construction and contracting services in Gillette, Wyoming. Specializing in concrete work, foundation repair, structural construction, helical piles, spray foam insulation, and soil stabilization for residential and commercial projects.'
   robots:
     index: true
     follow: true
@@ -66,7 +66,7 @@ apps:
 analytics:
   vendors:
     googleAnalytics:
-      id: "G-3JSZX1CWKG"
+      id: 'G-3JSZX1CWKG'
 
 ui:
   theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"

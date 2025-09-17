@@ -10,6 +10,7 @@ Aden Enterprises, LLC ("we," "us," or "our") respects your privacy and is commit
 ## 1. Information We Collect
 
 ### Information You Provide
+
 We may collect information you voluntarily provide to us when you:
 
 - Request a quote or estimate
@@ -26,6 +27,7 @@ This information may include:
 - Payment and billing information (when applicable)
 
 ### Information Automatically Collected
+
 When you visit our website, we may automatically collect:
 
 - IP address and browser type
@@ -50,6 +52,7 @@ We use the information we collect to:
 ## 3. Information Sharing and Disclosure
 
 ### Service Providers
+
 We may share your information with trusted third-party service providers who assist us in operating our business, such as:
 
 - Subcontractors and suppliers (as necessary for project completion)
@@ -58,6 +61,7 @@ We may share your information with trusted third-party service providers who ass
 - IT service providers
 
 ### Legal Requirements
+
 We may disclose your information if required to do so by law or in response to valid requests by public authorities, including:
 
 - Court orders or subpoenas
@@ -65,9 +69,11 @@ We may disclose your information if required to do so by law or in response to v
 - Legal proceedings
 
 ### Business Transfers
+
 If Aden Enterprises, LLC is involved in a merger, acquisition, or sale of assets, your information may be transferred as part of that transaction.
 
 ### Consent
+
 We may disclose your information for any other purpose with your consent.
 
 ## 4. Data Security
@@ -77,12 +83,15 @@ We implement appropriate technical and organizational security measures to prote
 ## 5. Your Privacy Rights
 
 ### Access and Correction
+
 You have the right to request access to the personal information we hold about you and to request corrections to any inaccurate information.
 
 ### Opt-Out
+
 You may opt out of receiving promotional communications from us by following the unsubscribe instructions in those communications or by contacting us directly.
 
 ### Do Not Track
+
 Our website does not currently respond to "Do Not Track" browser signals.
 
 ## 6. Cookies and Tracking Technologies
