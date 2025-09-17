@@ -43,10 +43,9 @@ export async function onRequestPost(context) {
     return new Response(null, {
       status: 302,
       headers: {
-        'Location': '/contact-success'
-      }
+        Location: '/contact-success',
+      },
     });
-
   } catch (err) {
     console.error('Form submission error:', err);
     return new Response('Error processing form submission', { status: 500 });
@@ -134,7 +133,6 @@ Website: ${formData.email ? `Reply to: ${formData.email}` : 'No email provided'}
     });
 
     console.log('Email notification sent successfully to kellee@prairiegiraffe.com via Cloudflare Email Workers');
-
   } catch (error) {
     console.error('Failed to send email via Cloudflare Email Workers:', error);
 

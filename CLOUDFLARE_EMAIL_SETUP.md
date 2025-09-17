@@ -11,6 +11,7 @@ The contact form is configured to use Cloudflare Email Workers, keeping everythi
 ### 1. Set up Email Routing (if using your domain)
 
 **Option A: Use your own domain (@adenentllc.com)**
+
 1. Go to Cloudflare Dashboard → Your domain (adenentllc.com)
 2. Navigate to **Email** → **Email Routing**
 3. Enable Email Routing
@@ -18,6 +19,7 @@ The contact form is configured to use Cloudflare Email Workers, keeping everythi
 5. Create a custom address like `contact@adenentllc.com` → forwards to `kellee@prairiegiraffe.com`
 
 **Option B: Use Cloudflare's email service**
+
 1. Go to your Pages project → **Settings** → **Environment Variables**
 2. Add email service configuration (details below)
 
@@ -40,6 +42,7 @@ The contact form is configured to use Cloudflare Email Workers, keeping everythi
 ## Email Features
 
 ### What the email includes:
+
 - **Professional HTML formatting** with clean styling
 - **All form fields**: First Name, Last Name, Phone, Email, Message
 - **Timestamp** in Mountain Time
@@ -47,6 +50,7 @@ The contact form is configured to use Cloudflare Email Workers, keeping everythi
 - **Spam protection** with honeypot field filtering
 
 ### Email format:
+
 ```
 To: kellee@prairiegiraffe.com
 From: noreply@adenentllc.com
@@ -83,6 +87,7 @@ Subject: New Contact Form Submission - [FirstName] [LastName]
 ## Support
 
 If you need help configuring the email service:
+
 1. Check Cloudflare's Email Workers documentation
 2. Use the Real-time Logs to debug any issues
 3. The form will continue working and logging even if email needs adjustment
