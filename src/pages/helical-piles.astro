@@ -1,0 +1,165 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Content from '~/components/widgets/Content.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Helical Piles - Engineered Deep Foundation Solutions | Aden Enterprises',
+  description: 'Professional helical pile installation, testing, and engineered solutions for new construction, underpinning, and foundation repair.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Helical Pile Services"
+    title="Helical Piles"
+    subtitle="Helical piles are an engineered deep foundation product that provides a total end bearing pile in bedrock. These can be installed for new construction, alterations to existing structures, or to repair a settled foundation. They can be used for compression or tension in vertical or horizontal designs."
+    actions={[
+      { variant: 'primary', text: '(307) 660-3011', href: 'tel:+13076603011', icon: 'tabler:phone' },
+      { text: 'Learn More', href: '#services' },
+    ]}
+  />
+
+  <!-- Note Widget ******************* -->
+
+  <Note title="Aden Enterprises:" description="Professional Helical Pile Installation and Engineering Solutions" />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    id="services"
+    title="Helical Pile Services"
+    subtitle="Comprehensive helical pile solutions for any foundation challenge"
+    columns={2}
+    items={[
+      {
+        title: 'Helical Pile Installation',
+        description:
+          'New construction, underpinning existing structures, tiebacks, tie-downs.',
+        icon: 'tabler:tool',
+      },
+      {
+        title: 'Helical Pile Brackets',
+        description:
+          'Helical Pile Brackets - Standard or custom to fit any design idea.',
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Helical Test Piles',
+        description:
+          'To determine accurate bearing depths of piles for design and/or bidding parameters.',
+        icon: 'tabler:search',
+      },
+      {
+        title: 'Engineered Solutions',
+        description:
+          'Working with our engineers and professional team we can develop the right solution for your project.',
+        icon: 'tabler:certificate',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    title="Solutions For Any Project"
+    items={[
+      {
+        title: 'Wide Load Range',
+        description:
+          'Our manufacturer has piles to accommodate ultimate loads from 1kip to 350 kips.',
+      },
+      {
+        title: 'Tight Space Installation',
+        description:
+          'We are able to install piles in tight areas with the majority of them installed with a skid-steer, needing only 7ft of head room.',
+      },
+      {
+        title: 'Versatile Connections',
+        description:
+          'Connections to your structure made possible thru bracket designs that range from concrete embedment, underpinning existing structures, wood or metal beams, or if needed custom designs.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/helical-piles.jpg',
+      alt: 'Helical Pile Installation Equipment',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Engineered Deep Foundation Solutions</h3>
+      Helical piles are truly a great 'no worries' foundation option for any construction project.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    title="Why Choose Helical Piles?"
+    items={[
+      {
+        title: 'Versatile Applications',
+        description:
+          'Perfect for new construction, structural repairs, underpinning, and foundation stabilization.',
+        icon: 'tabler:building',
+      },
+      {
+        title: 'All Weather Installation',
+        description:
+          'Can be installed in various weather conditions and soil types with immediate load capacity.',
+        icon: 'tabler:cloud',
+      },
+      {
+        title: 'Minimal Site Disturbance',
+        description:
+          'Installation requires minimal excavation and produces little noise or vibration.',
+        icon: 'tabler:leaf',
+      },
+      {
+        title: 'Load Tested & Certified',
+        description:
+          'Each pile installation can be monitored and verified during installation for ultimate reliability.',
+        icon: 'tabler:shield-check',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/UPB_Install.jpg',
+      alt: 'Helical Pile Foundation System',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Reliable Foundation Solutions</h3>
+      Engineered for performance, tested for reliability, and designed to last.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: '(307) 660-3011',
+        href: 'tel:+13076603011',
+        icon: 'tabler:phone',
+      },
+    ]}
+    title="Want Aden Enterprises On Your Project?"
+    subtitle="Contact us today and let's talk about your helical pile foundation needs."
+  />
+</Layout>

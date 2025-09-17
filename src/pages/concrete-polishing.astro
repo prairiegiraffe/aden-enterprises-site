@@ -1,0 +1,165 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Content from '~/components/widgets/Content.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Concrete Polishing Services | Aden Enterprises',
+  description: 'Professional polished concrete solutions - low-maintenance, durable, and easy to clean flooring with enhanced safety and natural light benefits.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Concrete Polishing Services"
+    title="Concrete Polishing"
+    subtitle="Polished concrete is a low-maintenance, durable and easy to clean flooring option. It can be used in place of many other types of flooring and other materials due to its high amount of friction which prevents slipping when walking on them."
+    actions={[
+      { variant: 'primary', text: '(307) 660-3011', href: 'tel:+13076603011', icon: 'tabler:phone' },
+      { text: 'Learn More', href: '#services' },
+    ]}
+  />
+
+  <!-- Note Widget ******************* -->
+
+  <Note title="Polished Concrete Solutions:" description="Call today to discuss your project and if Polished Concrete is right for you." />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    id="services"
+    title="Benefits of Polished Concrete"
+    subtitle="Professional polished concrete flooring that combines durability, safety, and aesthetic appeal"
+    columns={2}
+    items={[
+      {
+        title: 'Low-Maintenance',
+        description:
+          'Durable and easy to clean flooring that requires minimal ongoing maintenance.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Safety Features',
+        description:
+          'High amount of friction prevents slipping when walking, providing enhanced safety.',
+        icon: 'tabler:shield',
+      },
+      {
+        title: 'Health Benefits',
+        description:
+          'Reduces dust mites & allergens, creating a healthier indoor environment.',
+        icon: 'tabler:heart',
+      },
+      {
+        title: 'Natural Light Enhancement',
+        description:
+          'Highly reflective polished floors reduce lighting requirements, bringing more natural light into spaces.',
+        icon: 'tabler:sun',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    title="Why Choose Polished Concrete?"
+    items={[
+      {
+        title: 'Versatile Flooring Solution',
+        description:
+          'Can be used in place of many other types of flooring and materials for residential and commercial applications.',
+      },
+      {
+        title: 'Durable & Long-Lasting',
+        description:
+          'Extremely durable flooring option that withstands heavy traffic and maintains its appearance over time.',
+      },
+      {
+        title: 'Cost-Effective',
+        description:
+          'Lower maintenance costs and reduced lighting requirements make polished concrete an economical choice.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/polished-concrete-floor.jpg',
+      alt: 'Polished Concrete Floor',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Professional Concrete Polishing</h3>
+      Transform your concrete floors into beautiful, functional surfaces that enhance both safety and aesthetics.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    title="Applications for Polished Concrete"
+    items={[
+      {
+        title: 'Residential Homes',
+        description:
+          'Modern, sleek flooring for kitchens, living areas, and basements that enhances natural light.',
+        icon: 'tabler:home',
+      },
+      {
+        title: 'Commercial Spaces',
+        description:
+          'Ideal for retail stores, offices, and showrooms where durability and appearance matter.',
+        icon: 'tabler:building-store',
+      },
+      {
+        title: 'Industrial Facilities',
+        description:
+          'Perfect for warehouses and manufacturing facilities requiring heavy-duty, easy-clean surfaces.',
+        icon: 'tabler:building-factory',
+      },
+      {
+        title: 'Garages & Workshops',
+        description:
+          'Transform garage and workshop floors into professional, easy-to-maintain surfaces.',
+        icon: 'tabler:car-garage',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/Concrete-Countertop.png',
+      alt: 'Polished Concrete Applications',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Versatile Polished Concrete Solutions</h3>
+      From residential homes to industrial facilities, polished concrete provides the perfect flooring solution for any space.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: '(307) 660-3011',
+        href: 'tel:+13076603011',
+        icon: 'tabler:phone',
+      },
+    ]}
+    title="Want Aden Enterprises On Your Project?"
+    subtitle="Contact us today and let's talk about your concrete polishing needs."
+  />
+</Layout>

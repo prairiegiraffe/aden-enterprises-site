@@ -1,0 +1,268 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Content from '~/components/widgets/Content.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Structural Construction Services | Aden Enterprises',
+  description: 'Professional structural construction and framing services in Gillette, WY. Expert load-bearing systems, precision framing, and structural integrity solutions.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Structural Construction Services"
+    title="Structural Construction Services"
+    subtitle="Building the Backbone of Your Project with Precision and Expertise. The structural integrity of any building determines its longevity, safety, and value. At Aden Enterprises, LLC, our structural construction services provide the solid framework your project needs to stand strong for generations."
+    actions={[
+      { variant: 'primary', text: '(307) 660-3011', href: 'tel:+13076603011', icon: 'tabler:phone' },
+      { text: 'Our Services', href: '#services' },
+    ]}
+  />
+
+  <!-- Note Widget ******************* -->
+
+  <Note title="Complete Structural Construction Solutions:" description="Professional framing services, load-bearing systems, and foundation-to-roof integration for residential and commercial projects." />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    id="services"
+    title="Our Structural Construction Process"
+    subtitle="From engineering coordination to quality verification, we ensure every component meets or exceeds design specifications"
+    columns={2}
+    items={[
+      {
+        title: 'Engineering Coordination',
+        description:
+          'We work closely with structural engineers to ensure every component meets or exceeds design specifications. Our team interprets complex blueprints and engineering documents.',
+        icon: 'tabler:chart-line',
+      },
+      {
+        title: 'Material Selection',
+        description:
+          'We use only quality-grade materials appropriate for your project\'s requirements. Whether it\'s dimensional lumber, engineered wood products, or structural steel.',
+        icon: 'tabler:package',
+      },
+      {
+        title: 'Precision Installation',
+        description:
+          'Our crews use advanced techniques and equipment to ensure accurate placement and assembly. Every connection point, angle, and measurement receives careful attention.',
+        icon: 'tabler:tool',
+      },
+      {
+        title: 'Quality Verification',
+        description:
+          'Throughout construction, we conduct systematic checks to verify compliance with plans and building codes. This prevents costly corrections and ensures safety requirements.',
+        icon: 'tabler:shield-check',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    title="Professional Framing Services"
+    items={[
+      {
+        title: 'Wood & Steel Framing',
+        description:
+          'Our experienced framing crews bring precision to every project. We work with wood and steel framing systems, adapting our approach to meet your project\'s specific requirements.',
+      },
+      {
+        title: 'Load-Bearing Systems',
+        description:
+          'Understanding load distribution is critical to structural integrity. We expertly construct load-bearing walls, beam and column installations, and floor/roof joist systems.',
+      },
+      {
+        title: 'Foundation-to-Roof Integration',
+        description:
+          'We ensure seamless integration between your foundation and framing systems, creating a unified structure that properly transfers loads and resists environmental forces.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/basement-framing-construction-interior-frame-of-a-2025-03-28-05-30-07-utc-1.jpg',
+      alt: 'Structural Framing Construction',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Precision Structural Framing</h3>
+      From residential homes to commercial buildings, we ensure every wall, floor, and roof structure is built to exact specifications.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    title="Structural Services We Provide"
+    items={[
+      {
+        title: 'New Construction Framing',
+        description:
+          'Complete structural framing for single-family homes, multi-family residential buildings, commercial structures, agricultural buildings, and additions.',
+        icon: 'tabler:building',
+      },
+      {
+        title: 'Structural Modifications',
+        description:
+          'Load-bearing wall removal and beam installation, second-story additions, roof structure modifications, and opening enlargements.',
+        icon: 'tabler:tools',
+      },
+      {
+        title: 'Specialized Structural Work',
+        description:
+          'Hurricane and seismic reinforcement, tall wall framing, complex roof geometries, cantilever framing, and structural repairs.',
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Weather-Resistant Construction',
+        description:
+          'We understand Wyoming\'s challenging climate and build structures designed to withstand extreme weather conditions.',
+        icon: 'tabler:cloud-storm',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/Framing-1.png',
+      alt: 'Commercial Framing Work',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Comprehensive Structural Solutions</h3>
+      Whether it's new construction, modifications, or specialized work, we have the expertise to handle all your structural needs.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Why Structural Quality Matters"
+    subtitle="The importance of precision structural construction for your project's success"
+    columns={2}
+    items={[
+      {
+        title: 'Safety First',
+        description:
+          'Properly constructed structural systems protect occupants and contents from collapse, weather events, and normal wear over time.',
+        icon: 'tabler:shield',
+      },
+      {
+        title: 'Long-Term Value',
+        description:
+          'Quality structural construction maintains property value and prevents expensive repairs caused by settling, sagging, or structural failure.',
+        icon: 'tabler:trending-up',
+      },
+      {
+        title: 'Energy Efficiency',
+        description:
+          'Precise framing reduces gaps and thermal bridging, supporting better insulation performance and lower energy costs.',
+        icon: 'tabler:leaf',
+      },
+      {
+        title: 'Future Flexibility',
+        description:
+          'Well-built structures accommodate future modifications and additions more easily, protecting your investment as needs change.',
+        icon: 'tabler:arrows-maximize',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    title="The Aden Enterprises Difference"
+    items={[
+      {
+        title: 'Experienced Craftsmen',
+        description:
+          'Our structural crews bring decades of combined experience to your project. They understand the nuances of different framing systems and construction methods.',
+      },
+      {
+        title: 'Code Compliance',
+        description:
+          'We stay current with building codes and industry standards, ensuring your structure meets all regulatory requirements.',
+      },
+      {
+        title: 'Integrated Services',
+        description:
+          'As general contractors, we coordinate structural work with all other trades, preventing conflicts and ensuring smooth project flow.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/construction-engineer-wear-safety-uniform-under-in-2025-03-13-15-25-19-utc-1.jpg',
+      alt: 'Professional Construction Team',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Professional Expertise</h3>
+      Our team combines experience, knowledge, and precision to deliver structural systems that exceed expectations.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="Common Questions About Structural Construction"
+    subtitle="Get answers to frequently asked questions about our structural construction services"
+    tagline="FAQs"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'How long does framing take?',
+        description:
+          'Timeline varies by project size and complexity. A typical residential home frame takes 2-4 weeks, while commercial projects vary widely based on scope and design requirements.',
+      },
+      {
+        title: 'What\'s included in structural construction?',
+        description:
+          'Our structural services include all framing, sheathing, and structural connections from the foundation up, including roof structure and load-bearing systems.',
+      },
+      {
+        title: 'Can you work with my architect/engineer?',
+        description:
+          'Absolutely. We regularly collaborate with design professionals to bring their visions to life while ensuring structural integrity and code compliance.',
+      },
+      {
+        title: 'Do you handle structural modifications?',
+        description:
+          'Yes, we specialize in structural modifications including load-bearing wall removal, beam installation, additions, and opening enlargements for existing structures.',
+      },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: '(307) 660-3011',
+        href: 'tel:+13076603011',
+        icon: 'tabler:phone',
+      },
+    ]}
+    title="Start Building on Solid Framework"
+    subtitle="Your project deserves a structural system built with expertise and precision. Let Aden Enterprises provide the strong foundation for your construction success."
+  />
+</Layout>

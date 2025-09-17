@@ -1,0 +1,216 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Content from '~/components/widgets/Content.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Complete General Contracting Services | Aden Enterprises',
+  description: 'Professional general contractor services in Gillette, WY. Complete project management from concept to completion for residential and commercial construction.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="General Contracting Services"
+    title="Complete General Contracting Services"
+    subtitle="Building Your Vision from Concept to Completion. At Aden Enterprises, LLC, we serve as your single point of contact for all construction needs. As experienced general contractors, we manage every aspect of your residential and commercial projects, ensuring seamless coordination, quality workmanship, and timely completion."
+    actions={[
+      { variant: 'primary', text: '(307) 660-3011', href: 'tel:+13076603011', icon: 'tabler:phone' },
+      { text: 'Our Services', href: '#services' },
+    ]}
+  />
+
+  <!-- Note Widget ******************* -->
+
+  <Note title="What We Do As Your General Contractor:" description="Comprehensive project planning, full project coordination, and end-to-end construction management for all your building needs." />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    id="services"
+    title="Our General Contracting Approach"
+    subtitle="From breaking ground to final walkthrough, we handle every aspect of your construction project"
+    columns={2}
+    items={[
+      {
+        title: 'Comprehensive Project Planning',
+        description:
+          'We begin every project with detailed planning and consultation. Our team works closely with you to understand your vision, establish realistic budgets, develop timelines, and navigate permitting requirements.',
+        icon: 'tabler:clipboard-check',
+      },
+      {
+        title: 'Full Project Coordination',
+        description:
+          'Managing multiple trades and suppliers requires experience and attention to detail. We coordinate all subcontractors, schedule deliveries, oversee quality control, and maintain constant communication throughout your project.',
+        icon: 'tabler:users',
+      },
+      {
+        title: 'Budget Management',
+        description:
+          'We provide transparent pricing and work diligently to maximize value while staying within your budget parameters. Our established relationships with suppliers and subcontractors help us secure competitive pricing.',
+        icon: 'tabler:currency-dollar',
+      },
+      {
+        title: 'Timeline Adherence',
+        description:
+          'Construction delays cost money and cause frustration. We develop realistic schedules and actively manage each phase to keep your project on track.',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Quality Assurance',
+        description:
+          'Every aspect of your project receives thorough oversight. We conduct regular inspections, ensure code compliance, and maintain the highest standards of workmanship.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Clear Communication',
+        description:
+          'You\'ll never wonder about your project\'s status. We provide regular updates, promptly address questions, and maintain open lines of communication from start to finish.',
+        icon: 'tabler:message-circle',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    title="End-to-End Construction Management"
+    items={[
+      {
+        title: 'Site Preparation & Earthwork',
+        description:
+          'Professional site preparation and grading to create the perfect foundation for your project.',
+      },
+      {
+        title: 'Foundation & Concrete Work',
+        description:
+          'Complete structural construction with precision engineering and quality materials.',
+      },
+      {
+        title: 'MEP Coordination',
+        description:
+          'Mechanical, electrical, and plumbing coordination with licensed professionals.',
+      },
+      {
+        title: 'Interior & Exterior Finishes',
+        description:
+          'Final inspections and quality assurance to ensure your project meets the highest standards.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/basement-framing-construction-interior-frame-of-a-2025-03-28-05-30-07-utc-1.jpg',
+      alt: 'Construction Framing Work',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">From Breaking Ground to Final Walkthrough</h3>
+      We transform your ideas into actionable construction plans that deliver results.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    title="Types of Projects We Handle"
+    items={[
+      {
+        title: 'Commercial Construction',
+        description:
+          'Office buildings, retail spaces, industrial facilities, multi-unit residential complexes, renovation and tenant improvements, site development.',
+        icon: 'tabler:building-store',
+      },
+      {
+        title: 'Residential Construction',
+        description:
+          'Custom home construction, home additions and expansions, complete renovations, garage and outbuilding construction.',
+        icon: 'tabler:home',
+      },
+      {
+        title: 'Foundation & Structural Repairs',
+        description:
+          'Professional foundation repair and structural work to restore and strengthen existing buildings.',
+        icon: 'tabler:tool',
+      },
+      {
+        title: 'Site Development',
+        description:
+          'Complete site development including infrastructure, utilities, and site preparation for new construction.',
+        icon: 'tabler:map',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/close-up-of-construction-workers-using-cement-pump-2024-09-23-07-26-12-utc-1.jpg',
+      alt: 'Construction Workers Using Cement Pump',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Versatile Project Capabilities</h3>
+      Whether you're planning new construction, major renovation, or commercial development, we have the expertise and resources to bring your project to life.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="The Aden Enterprises Advantage"
+    subtitle="Why choose us as your general contractor"
+    columns={2}
+    items={[
+      {
+        title: 'Licensed and Insured',
+        description:
+          'We maintain all necessary licenses and comprehensive insurance coverage, giving you peace of mind throughout your project.',
+        icon: 'tabler:certificate',
+      },
+      {
+        title: 'Local Knowledge',
+        description:
+          'As Gillette residents since 1989, we understand local building codes, permit processes, and have established relationships with municipal offices and local suppliers.',
+        icon: 'tabler:map-pin',
+      },
+      {
+        title: 'Proven Track Record',
+        description:
+          'Since 2005, we\'ve successfully completed hundreds of projects throughout the area. Our portfolio demonstrates our versatility and commitment to excellence.',
+        icon: 'tabler:award',
+      },
+      {
+        title: 'Single-Source Accountability',
+        description:
+          'When you work with Aden Enterprises as your general contractor, you have one number to call and one team responsible for your project\'s success.',
+        icon: 'tabler:check',
+      },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: '(307) 660-3011',
+        href: 'tel:+13076603011',
+        icon: 'tabler:phone',
+      },
+    ]}
+    title="Ready to Discuss Your Project?"
+    subtitle="Our team is ready to discuss your needs and provide a comprehensive proposal for your construction project."
+  />
+</Layout>

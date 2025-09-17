@@ -1,0 +1,165 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Content from '~/components/widgets/Content.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Soil Stabilization Services | Aden Enterprises',
+  description: 'Expert soil stabilization services with over 70 years of experience using proven processes and industry-leading materials.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Soil Stabilization Services"
+    title="Soil Stabilization"
+    subtitle="Our experts are ready to make your next soil stabilization project a success."
+    actions={[
+      { variant: 'primary', text: '(307) 660-3011', href: 'tel:+13076603011', icon: 'tabler:phone' },
+      { text: 'Learn More', href: '#services' },
+    ]}
+  />
+
+  <!-- Note Widget ******************* -->
+
+  <Note title="Why Trust Aden For Soil Stabilization:" description="When starting a new site project it's common for the soil conditions to be less than ideal." />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    id="services"
+    title="Expert Soil Stabilization Solutions"
+    subtitle="Proven processes and industry-leading materials for every soil condition"
+    columns={2}
+    items={[
+      {
+        title: 'Expert Staff',
+        description:
+          'Our team has over 70+ years in the construction and soil stabilization industry. You can trust our knowledgeable staff to get your project done on time and under budget.',
+        icon: 'tabler:users',
+      },
+      {
+        title: 'Proven Process and Resources',
+        description:
+          'No two soil stabilization jobs are the same, so we utilize the industries best processes and materials to get your job done right.',
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Industry-Leading Materials',
+        description:
+          'Code L, Quicklime, Hydrated Lime, Fly Ash, Portland Cement, and more!',
+        icon: 'tabler:package',
+      },
+      {
+        title: 'On Time & Under Budget',
+        description:
+          'Professional project management ensures your soil stabilization is completed efficiently and cost-effectively.',
+        icon: 'tabler:clock',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    title="Professional Soil Stabilization"
+    items={[
+      {
+        title: '70+ Years Experience',
+        description:
+          'Decades of combined expertise in construction and soil stabilization across various soil conditions.',
+      },
+      {
+        title: 'Custom Solutions',
+        description:
+          'Every soil stabilization project is unique - we tailor our approach to your specific site conditions.',
+      },
+      {
+        title: 'Quality Materials',
+        description:
+          'We use only the best industry materials and proven processes for lasting results.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/Earthwork-1.png',
+      alt: 'Soil Stabilization Work',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Trusted Soil Experts</h3>
+      When soil conditions are less than ideal, trust our experienced team to provide the right stabilization solution.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    title="Soil Stabilization Materials & Methods"
+    items={[
+      {
+        title: 'Code L Stabilization',
+        description:
+          'Professional Code L application for optimal soil stabilization in challenging conditions.',
+        icon: 'tabler:certificate',
+      },
+      {
+        title: 'Lime Treatments',
+        description:
+          'Quicklime and Hydrated Lime treatments for improving soil plasticity and strength.',
+        icon: 'tabler:flask',
+      },
+      {
+        title: 'Cement & Fly Ash',
+        description:
+          'Portland Cement and Fly Ash applications for long-term soil improvement.',
+        icon: 'tabler:building-bridge',
+      },
+      {
+        title: 'Site Assessment',
+        description:
+          'Comprehensive soil analysis to determine the best stabilization approach for your project.',
+        icon: 'tabler:search',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/yellow-digger-large-excavator-bucket-collect-and-pours-soil-stones-in-a-quarry-at-construction-site_t20_zndLgX.jpg',
+      alt: 'Soil Stabilization Equipment',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Comprehensive Stabilization Solutions</h3>
+      From initial soil assessment to final stabilization, we provide complete solutions using the best materials and methods.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: '(307) 660-3011',
+        href: 'tel:+13076603011',
+        icon: 'tabler:phone',
+      },
+    ]}
+    title="Want Aden Enterprises On Your Project?"
+    subtitle="Contact us today and let's talk about your soil stabilization needs."
+  />
+</Layout>

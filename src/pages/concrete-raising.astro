@@ -1,0 +1,165 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Content from '~/components/widgets/Content.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Concrete Raising with Polyurethane Foam | Aden Enterprises',
+  description: 'Professional concrete raising services for sidewalks, driveways, garage floors, and steps using polyurethane foam injection.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Concrete Raising Services"
+    title="Concrete Raising"
+    subtitle="Do you have concrete sidewalks, driveway, garage floor, or steps that are sinking? Have them repaired using Concrete Raising with Polyurethane Foam. You're able to drive on the repair in 24 hours!"
+    actions={[
+      { variant: 'primary', text: '(307) 660-3011', href: 'tel:+13076603011', icon: 'tabler:phone' },
+      { text: 'Learn More', href: '#services' },
+    ]}
+  />
+
+  <!-- Note Widget ******************* -->
+
+  <Note title="Aden Enterprises:" description="Professional Concrete Raising and Polyurethane Foam Injection Services" />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    id="services"
+    title="Concrete Raising with Polyurethane Foam"
+    subtitle="Repairing settled concrete at a fraction of the cost of replacement"
+    columns={2}
+    items={[
+      {
+        title: 'Fast Repair Time',
+        description:
+          'You are able to drive on the repair in 24hrs as opposed to replacement which can take weeks.',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Moisture Protection',
+        description:
+          'Helps seal moisture from penetrating the soils below your concrete.',
+        icon: 'tabler:droplet',
+      },
+      {
+        title: 'Environmentally Friendly',
+        description:
+          'Uses recycled materials, making it an eco-conscious repair solution.',
+        icon: 'tabler:leaf',
+      },
+      {
+        title: 'Cost Effective',
+        description:
+          'Repair settled concrete at a fraction of the cost of complete replacement.',
+        icon: 'tabler:currency-dollar',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    title="Why Choose Concrete Raising?"
+    items={[
+      {
+        title: 'Quick & Convenient',
+        description:
+          'Minimal disruption to your daily routine with fast 24-hour cure time.',
+      },
+      {
+        title: 'Permanent Solution',
+        description:
+          'Polyurethane foam provides a long-lasting repair that won\'t settle again.',
+      },
+      {
+        title: 'Precise Lifting',
+        description:
+          'Controlled injection allows for precise lifting to restore original grade.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/Concrete-Raising.png',
+      alt: 'Concrete Raising Process',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Professional Concrete Lifting</h3>
+      Advanced polyurethane foam injection technology for reliable, long-lasting concrete repairs.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    title="Applications for Concrete Raising"
+    items={[
+      {
+        title: 'Sidewalks & Walkways',
+        description:
+          'Eliminate trip hazards and restore safe walking surfaces around your property.',
+        icon: 'tabler:walk',
+      },
+      {
+        title: 'Driveways',
+        description:
+          'Level sunken driveway sections for smooth vehicle access and improved curb appeal.',
+        icon: 'tabler:car',
+      },
+      {
+        title: 'Garage Floors',
+        description:
+          'Repair settled garage floors to prevent water pooling and improve functionality.',
+        icon: 'tabler:home-2',
+      },
+      {
+        title: 'Steps & Patios',
+        description:
+          'Restore proper drainage and eliminate safety hazards on steps and patio areas.',
+        icon: 'tabler:stairs',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/uneven-concrete-.jpg',
+      alt: 'Concrete Settlement Issues',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Versatile Repair Solutions</h3>
+      From residential sidewalks to commercial parking areas, we handle all types of concrete settlement issues.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: '(307) 660-3011',
+        href: 'tel:+13076603011',
+        icon: 'tabler:phone',
+      },
+    ]}
+    title="Want Aden Enterprises On Your Project?"
+    subtitle="Contact us today and let's talk about your concrete raising needs."
+  />
+</Layout>

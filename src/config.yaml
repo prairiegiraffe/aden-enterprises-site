@@ -1,6 +1,6 @@
 site:
-  name: AstroWind
-  site: 'https://astrowind.vercel.app'
+  name: Aden Enterprises
+  site: 'https://www.adenenterprises.com'
   base: '/'
   trailingSlash: false
 
@@ -9,22 +9,22 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: AstroWind
-    template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    default: Aden Enterprises
+    template: '%s — Aden Enterprises'
+  description: "Professional construction and contracting services in Gillette, Wyoming. Specializing in concrete work, foundation repair, structural construction, helical piles, spray foam insulation, and soil stabilization for residential and commercial projects."
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: AstroWind
+    site_name: Aden Enterprises
     images:
       - url: '~/assets/images/default.png'
         width: 1200
         height: 628
     type: website
   twitter:
-    handle: '@arthelokyo'
-    site: '@arthelokyo'
+    handle: '@adenenterprises'
+    site: '@adenenterprises'
     cardType: summary_large_image
 
 i18n:
@@ -66,7 +66,7 @@ apps:
 analytics:
   vendors:
     googleAnalytics:
-      id: null # or "G-XXXXXXXXXX"
+      id: "G-3JSZX1CWKG"
 
 ui:
   theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"

@@ -1,2 +1,9 @@
 User-agent: *
-Disallow:
+Allow: /
+
+# Sitemap
+Sitemap: https://www.adenenterprises.com/sitemap-index.xml
+
+# Disallow admin areas
+Disallow: /admin/
+Disallow: /decapcms/

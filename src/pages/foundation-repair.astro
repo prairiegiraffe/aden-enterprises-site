@@ -1,0 +1,165 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Content from '~/components/widgets/Content.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Foundation Jacking and Repair Services | Aden Enterprises',
+  description: 'Licensed and insured foundation jacking and repair specialists with over 70 years of experience in foundation stabilization and repair.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Foundation Repair Services"
+    title="Foundation Jacking and Repair"
+    subtitle="Aden Enterprises is your local licensed and insured foundation jacking and repair specialist. Don't trust your foundation to just anyone, with more than 70+ years of experience, you can trust us to repair your foundation right the first time."
+    actions={[
+      { variant: 'primary', text: '(307) 660-3011', href: 'tel:+13076603011', icon: 'tabler:phone' },
+      { text: 'Our Services', href: '#services' },
+    ]}
+  />
+
+  <!-- Note Widget ******************* -->
+
+  <Note title="Expert Foundation Solutions:" description="Your foundation is crucial to the structure of your entire home or building. If you're seeing cracks, settling, leaning, or any other issues with your foundation or basement give us a call." />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    id="services"
+    title="Services"
+    subtitle="Comprehensive foundation repair solutions for residential and commercial properties"
+    columns={2}
+    items={[
+      {
+        title: 'Foundation Jacking',
+        description:
+          'Address settled concrete issues large and small with professional jacking techniques.',
+        icon: 'tabler:arrow-up',
+      },
+      {
+        title: 'Foundation Repair',
+        description:
+          'Cracks, bowing and leaning walls, settling, sagging, settling columns, and more. Give us a call and let\'s discuss your foundation.',
+        icon: 'tabler:home',
+      },
+      {
+        title: 'Prefabricated Shoring Panels',
+        description:
+          'Complete shoring systems and side panels for structural support during repairs.',
+        icon: 'tabler:wall',
+      },
+      {
+        title: 'Excavation and Backfill',
+        description:
+          'Midsized and smaller equipment for "in-house earthwork" that saves you money.',
+        icon: 'tabler:shovel',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    title="Why Choose Our Foundation Services?"
+    items={[
+      {
+        title: 'Licensed & Insured',
+        description:
+          'Fully licensed and insured foundation specialists you can trust with your most important investment.',
+      },
+      {
+        title: '70+ Years Experience',
+        description:
+          'Decades of combined experience in foundation repair and structural solutions.',
+      },
+      {
+        title: 'Right the First Time',
+        description:
+          'Our expertise ensures your foundation is repaired correctly from the start, saving you time and money.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/Foundation-Repair.jpg',
+      alt: 'Foundation Repair Work',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Trusted Foundation Experts</h3>
+      Don't trust your foundation to just anyone - choose the experienced professionals at Aden Enterprises.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    title="Foundation Problems We Solve"
+    items={[
+      {
+        title: 'Settling & Sinking',
+        description:
+          'Professional foundation jacking to lift and stabilize settled foundations.',
+        icon: 'tabler:arrow-down',
+      },
+      {
+        title: 'Cracks & Structural Issues',
+        description:
+          'Repair foundation cracks and address structural problems before they worsen.',
+        icon: 'tabler:alert-triangle',
+      },
+      {
+        title: 'Bowing & Leaning Walls',
+        description:
+          'Stabilize and straighten foundation walls using proven repair techniques.',
+        icon: 'tabler:angle',
+      },
+      {
+        title: 'Water Damage',
+        description:
+          'Address water infiltration issues and prevent future foundation damage.',
+        icon: 'tabler:droplet',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/dirty-old-cracked-concrete-wall-2025-03-10-23-45-06-utc-1.jpg',
+      alt: 'Cracked Concrete Wall Repair',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Comprehensive Foundation Solutions</h3>
+      From minor cracks to major structural issues, we have the expertise to restore your foundation's integrity.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: '(307) 660-3011',
+        href: 'tel:+13076603011',
+        icon: 'tabler:phone',
+      },
+    ]}
+    title="Want Aden Enterprises On Your Project?"
+    subtitle="Contact us today and let's talk about your foundation repair needs."
+  />
+</Layout>

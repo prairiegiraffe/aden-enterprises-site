@@ -1,0 +1,189 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Content from '~/components/widgets/Content.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Concrete Services - Installation, Repair & Removal | Aden Enterprises',
+  description: 'Professional concrete services in Northeast Wyoming including foundations, flatwork, driveways, sidewalks, and commercial projects.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Concrete Services"
+    title="Concrete"
+    subtitle="Whether you need help with your driveway, foundation, or a new sidewalk for a commercial project we do everything possible to make sure we get it done right."
+    actions={[
+      { variant: 'primary', text: '(307) 660-3011', href: 'tel:+13076603011', icon: 'tabler:phone' },
+      { text: 'Our Services', href: '#services' },
+    ]}
+  />
+
+  <!-- Note Widget ******************* -->
+
+  <Note title="All Your Concrete Needs:" description="When you need concrete installation, repair or removal services in the Northeast Wyoming area trust only those who know what they're doing at Aden Enterprises Inc." />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    id="services"
+    title="Comprehensive Concrete Services"
+    subtitle="We provide top quality products and services for all your concrete needs - from residential jobs to commercial projects large and small"
+    columns={2}
+    items={[
+      {
+        title: 'Foundations',
+        description:
+          'Professional foundation installation for residential and commercial construction projects.',
+        icon: 'tabler:home',
+      },
+      {
+        title: 'Flatwork',
+        description:
+          'Expert flatwork services including slabs, floors, and horizontal concrete surfaces.',
+        icon: 'tabler:square',
+      },
+      {
+        title: 'Slope-paving',
+        description:
+          'Specialized slope-paving for proper drainage and accessibility requirements.',
+        icon: 'tabler:trending-up',
+      },
+      {
+        title: 'Curb And Gutter',
+        description:
+          'Professional curb and gutter installation for municipal and commercial projects.',
+        icon: 'tabler:road',
+      },
+      {
+        title: 'Sidewalks',
+        description:
+          'Durable sidewalk construction for safe pedestrian access in residential and commercial areas.',
+        icon: 'tabler:walk',
+      },
+      {
+        title: 'Parking Lots',
+        description:
+          'Complete parking lot construction and repair services for commercial properties.',
+        icon: 'tabler:car',
+      },
+      {
+        title: 'Driveways',
+        description:
+          'Residential and commercial driveway installation with superior durability and finish.',
+        icon: 'tabler:home-2',
+      },
+      {
+        title: 'Colored, And Pattern',
+        description:
+          'Decorative concrete options including colored and patterned finishes for enhanced aesthetics.',
+        icon: 'tabler:palette',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    title="Why Choose Aden Enterprises for Concrete?"
+    items={[
+      {
+        title: 'Expert Knowledge',
+        description:
+          'Trust only those who know what they\'re doing - our experienced team delivers professional results.',
+      },
+      {
+        title: 'Quality Products & Services',
+        description:
+          'We provide top quality products and services for all your concrete needs, ensuring lasting results.',
+      },
+      {
+        title: 'No Hassles, Quick Results',
+        description:
+          'We can take care of every detail so that there are no hassles; just quick results with minimal fuss!',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/close-up-of-construction-workers-using-cement-pump-2024-09-23-07-26-12-utc-1.jpg',
+      alt: 'Construction Workers Using Cement Pump',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Professional Concrete Excellence</h3>
+      From residential driveways to large commercial projects, we deliver concrete solutions that stand the test of time.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    title="Concrete Project Types"
+    items={[
+      {
+        title: 'Residential Projects',
+        description:
+          'Driveways, sidewalks, patios, and foundations for homes throughout Northeast Wyoming.',
+        icon: 'tabler:home',
+      },
+      {
+        title: 'Commercial Projects',
+        description:
+          'Large-scale concrete work including parking lots, building foundations, and commercial flatwork.',
+        icon: 'tabler:building-store',
+      },
+      {
+        title: 'Decorative Concrete',
+        description:
+          'Colored and patterned concrete options to enhance the aesthetic appeal of any project.',
+        icon: 'tabler:palette',
+      },
+      {
+        title: 'Repair & Maintenance',
+        description:
+          'Professional concrete repair and removal services to restore or replace existing structures.',
+        icon: 'tabler:tools',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/Concrete-2-1.png',
+      alt: 'Various Concrete Applications',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Complete Concrete Solutions</h3>
+      We handle every aspect of your concrete project from initial planning to final finishing, ensuring quality results every time.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: '(307) 660-3011',
+        href: 'tel:+13076603011',
+        icon: 'tabler:phone',
+      },
+    ]}
+    title="Want Aden Enterprises On Your Project?"
+    subtitle="Contact us today and let's talk about your concrete needs."
+  />
+</Layout>

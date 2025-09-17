@@ -1,0 +1,165 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Content from '~/components/widgets/Content.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Spray-foam Insulation Services | Aden Enterprises',
+  description: 'Professional spray-foam insulation for new construction, remodels, and any project requiring superior thermal protection.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Spray-foam Insulation Services"
+    title="Spray-foam Insulation"
+    subtitle="Our performance spray-foam insulations are perfect for new construction, remodels, and any other project requiring professional insulation."
+    actions={[
+      { variant: 'primary', text: '(307) 660-3011', href: 'tel:+13076603011', icon: 'tabler:phone' },
+      { text: 'Learn More', href: '#services' },
+    ]}
+  />
+
+  <!-- Note Widget ******************* -->
+
+  <Note title="Insulation Options For Any Project!" description="Our spray foam insulation is less permeable by air and water than other insulations options. Some solutions can even provide up to 20-24 times more protection." />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    id="services"
+    title="Superior Spray-foam Performance"
+    subtitle="Advanced insulation technology that expands 50-70 times its liquid volume to penetrate every space and crevice"
+    columns={2}
+    items={[
+      {
+        title: 'Long Lasting',
+        description:
+          'Some of our solutions can last 75 years or more!',
+        icon: 'tabler:calendar',
+      },
+      {
+        title: 'Installs Fast',
+        description:
+          'Spray-foam insulation only takes 24 hours to cure.',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'ECO-friendly Options',
+        description:
+          'Ask about eco-friendly insulation options.',
+        icon: 'tabler:leaf',
+      },
+      {
+        title: 'Superior Protection',
+        description:
+          'Up to 20-24 times more protection than other insulation options.',
+        icon: 'tabler:shield',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    title="Why Choose Spray-foam Insulation?"
+    items={[
+      {
+        title: 'Air & Water Barrier',
+        description:
+          'Less permeable by air and water than other insulation options, providing superior protection.',
+      },
+      {
+        title: 'Complete Coverage',
+        description:
+          'Expands 50-70 times its liquid volume to penetrate every space and crevice.',
+      },
+      {
+        title: 'Thermal Protection',
+        description:
+          'Creates a solid layer of thermal protection that dramatically improves energy efficiency.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/Spray-Foam-Insulation.png',
+      alt: 'Spray-foam Insulation Application',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Advanced Insulation Technology</h3>
+      Professional spray-foam insulation that delivers unmatched thermal performance and energy savings.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    title="Applications for Spray-foam Insulation"
+    items={[
+      {
+        title: 'New Construction',
+        description:
+          'Perfect for new builds requiring the highest levels of thermal efficiency and air sealing.',
+        icon: 'tabler:building',
+      },
+      {
+        title: 'Remodels & Renovations',
+        description:
+          'Upgrade existing insulation with superior spray-foam technology for improved comfort.',
+        icon: 'tabler:tools',
+      },
+      {
+        title: 'Attics & Crawl Spaces',
+        description:
+          'Seal hard-to-reach areas where traditional insulation falls short.',
+        icon: 'tabler:home-2',
+      },
+      {
+        title: 'Commercial Projects',
+        description:
+          'Professional-grade insulation solutions for commercial and industrial applications.',
+        icon: 'tabler:building-store',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/sprayfoam-around-window.jpg',
+      alt: 'Spray-foam Insulation Around Window',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Versatile Insulation Solutions</h3>
+      From residential homes to commercial buildings, spray-foam insulation provides superior performance across all applications.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: '(307) 660-3011',
+        href: 'tel:+13076603011',
+        icon: 'tabler:phone',
+      },
+    ]}
+    title="Want Aden Enterprises On Your Project?"
+    subtitle="Contact us today and let's talk about your spray-foam insulation needs."
+  />
+</Layout>
