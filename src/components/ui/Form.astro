@@ -5,8 +5,8 @@ import Button from '~/components/ui/Button.astro';
 const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } = Astro.props;
 ---
 
-<form method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/contact-success">
-  <!-- Hidden form name for Netlify -->
+<form method="POST" action="/api/submit">
+  <!-- Hidden form name -->
   <input type="hidden" name="form-name" value="contact" />
 
   <!-- Honeypot field for spam protection -->
